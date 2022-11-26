@@ -16,30 +16,37 @@ Catppuccin for
 
 ## Previews
 
-<details>
-<summary>
-🌻 Latte
-</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/latte.webp"/>
-</details>
-<details>
-<summary>
-🪴 Frappé
-</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/frappe.webp"/>
-</details>
-<details>
-<summary>
-🌺 Macchiato
-</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/macchiato.webp"/>
-</details>
-<details>
-<summary>
-🌿 Mocha
-</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp"/>
-</details>
+🌻 Latte</su
+
+```
+## `geom_smooth()` using formula 'y ~ x'
+```
+
+![](README_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+
+🪴 Frappé</su
+
+
+```
+## `geom_smooth()` using formula 'y ~ x'
+```
+
+![](README_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+🌺 Macchiato</su
+
+
+```
+## `geom_smooth()` using formula 'y ~ x'
+```
+
+![](README_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+🌿 Mochaary>
+
+    ## `geom_smooth()` using formula 'y ~ x'
+
+![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 ## Installation
 
@@ -50,9 +57,6 @@ Catppuccin for
 ## Usage
 
       library(ggplot2)
-
-    ## Warning: package 'ggplot2' was built under R version 4.1.2
-
       library(catppuccin)
 
       ggplot(mtcars, aes(mpg, wt)) +
@@ -60,7 +64,7 @@ Catppuccin for
         scale_colour_catppuccin(palette = "latte") +
         theme_bw()
 
-![](README_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
       ggplot(mtcars, aes(mpg, wt)) +
         geom_point(aes(colour = hp)) +
@@ -70,21 +74,21 @@ Catppuccin for
     ## Warning in scale_colour_catppuccin(palette = "frappe", discrete = FALSE): This
     ## palette has not been optimized for linear perception. Use at your own risk.
 
-![](README_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](README_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
       ggplot(data = mpg) +
         geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
         scale_colour_catppuccin(palette = "macchiato") +
         theme_bw()
 
-![](README_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](README_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
       ggplot(diamonds) +
         geom_bar(aes(x = cut, fill = clarity)) +
         scale_fill_catppuccin() +
         theme_bw()
 
-![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](README_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
  
 

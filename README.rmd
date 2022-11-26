@@ -19,24 +19,70 @@ output: md_document
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/preview.webp"/>
 </p>
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+  library(ggplot2)
+  library(catppuccin)
+  library(gridExtra)
+  ## set ggplo2 theme
+  data("diamonds")
+  p1 <- ggplot(
+    subset(diamonds, carat >= 2.2),
+    aes(x = table, y = price, colour = cut)
+  ) +
+    geom_point(alpha = 0.7) +
+    geom_smooth(method = "loess", alpha = 0.05, size = 1, span = 1) +
+    theme_bw() +
+    theme(
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank()
+    )
+  p2 <- ggplot(
+    subset(diamonds, carat > 2.2 & depth > 55 & depth < 70),
+    aes(x = depth, fill = cut)
+  ) +
+    geom_histogram(colour = "black", binwidth = 1, position = "dodge") +
+    theme_bw() +
+    theme(
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank()
+    )
+
+
+```
+
+
 ## Previews
 
-<details>
-<summary>🌻 Latte</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/latte.webp"/>
-</details>
-<details>
-<summary>🪴 Frappé</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/frappe.webp"/>
-</details>
-<details>
-<summary>🌺 Macchiato</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/macchiato.webp"/>
-</details>
-<details>
-<summary>🌿 Mocha</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp"/>
-</details>
+🌻 Latte</su
+``` {r echo = F}
+  p1_npg <- p1 + scale_color_catppuccin(palettes = "latte")
+  p2_npg <- p2 + scale_fill_catppuccin(palettes = "latte")
+  grid.arrange(p1_npg, p2_npg, ncol = 2)
+```
+
+🪴 Frappé</su
+
+``` {r echo = F}
+  p1_npg <- p1 + scale_color_catppuccin(palettes = "frappe")
+  p2_npg <- p2 + scale_fill_catppuccin(palettes = "frappe")
+  grid.arrange(p1_npg, p2_npg, ncol = 2)
+```
+
+🌺 Macchiato</su
+
+``` {r echo = F}
+  p1_npg <- p1 + scale_color_catppuccin(palettes = "macchiato")
+  p2_npg <- p2 + scale_fill_catppuccin(palettes = "macchiato")
+  grid.arrange(p1_npg, p2_npg, ncol = 2)
+```
+
+🌿 Mochaary>
+
+``` {r echo = F}
+  p1_npg <- p1 + scale_color_catppuccin(palettes = "mocha")
+  p2_npg <- p2 + scale_fill_catppuccin(palettes = "mocha")
+  grid.arrange(p1_npg, p2_npg, ncol = 2)
+```
 
 ## Installation
 

@@ -96,21 +96,33 @@ scale_fill_catppuccin <- function(..., palette = "mocha",
 if (FALSE) {
   library(ggplot2)
   library(catppuccin)
+  library(gridExtra)
   ## set ggplo2 theme
-  ggplot(mtcars, aes(mpg, wt)) +
-   geom_point(aes(colour = factor(cyl))) +
-   scale_colour_catppuccin(palette = "latte") +
-   theme_bw()
-  ggplot(mtcars, aes(mpg, wt)) +
-   geom_point(aes(colour = hp)) +
-   scale_colour_catppuccin(palette = "frappe", discrete = FALSE) +
-    theme_bw()
-  ggplot(data = mpg) +
-   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-   scale_colour_catppuccin(palette = "macchiato") +
-   theme_bw()
-  ggplot(diamonds) +
-   geom_bar(aes(x = cut, fill = clarity)) +
-   scale_fill_catppuccin() +
-   theme_bw()
+data("diamonds")
+p1 <- ggplot(
+  subset(diamonds, carat >= 2.2),
+  aes(x = table, y = price, colour = cut)
+) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", alpha = 0.05, size = 1, span = 1) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  )
+p2 <- ggplot(
+  subset(diamonds, carat > 2.2 & depth > 55 & depth < 70),
+  aes(x = depth, fill = cut)
+) +
+  geom_histogram(colour = "black", binwidth = 1, position = "dodge") +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  )
+### NPG
+
+p1_npg <- p1 + scale_color_catppuccin()
+p2_npg <- p2 + scale_fill_catppuccin()
+grid.arrange(p1_npg, p2_npg, ncol = 2)
 }
