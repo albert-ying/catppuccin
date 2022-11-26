@@ -53,35 +53,34 @@ output: md_document
 
 ## Previews
 
-🌻 Latte</su
-``` {r echo = F}
-  p1_npg <- p1 + scale_color_catppuccin(palettes = "latte")
-  p2_npg <- p2 + scale_fill_catppuccin(palettes = "latte")
+🌻 Latte
+``` {r, echo = F, fig.width = 10, fig.height = 3, dpi = 300}
+  p1_npg <- p1 + scale_color_catppuccin(palette = "latte")
+  p2_npg <- p2 + scale_fill_catppuccin(palette = "latte")
   grid.arrange(p1_npg, p2_npg, ncol = 2)
 ```
 
-🪴 Frappé</su
+🪴 Frappé
 
-``` {r echo = F}
-  p1_npg <- p1 + scale_color_catppuccin(palettes = "frappe")
-  p2_npg <- p2 + scale_fill_catppuccin(palettes = "frappe")
+``` {r, echo = F, fig.width = 10, fig.height = 3, dpi = 300}
+  p1_npg <- p1 + scale_color_catppuccin(palette = "frappe")
+  p2_npg <- p2 + scale_fill_catppuccin(palette = "frappe")
   grid.arrange(p1_npg, p2_npg, ncol = 2)
 ```
 
-🌺 Macchiato</su
+🌺 Macchiato
 
-``` {r echo = F}
-  p1_npg <- p1 + scale_color_catppuccin(palettes = "macchiato")
-  p2_npg <- p2 + scale_fill_catppuccin(palettes = "macchiato")
+``` {r, echo = F, fig.width = 10, fig.height = 3, dpi = 300}
+  p1_npg <- p1 + scale_color_catppuccin(palette = "macchiato")
+  p2_npg <- p2 + scale_fill_catppuccin(palette = "macchiato")
   grid.arrange(p1_npg, p2_npg, ncol = 2)
 ```
 
-🌿 Mochaary>
+🌿 Mocha
 
-``` {r echo = F}
-  p1_npg <- p1 + scale_color_catppuccin(palettes = "mocha")
-  p2_npg <- p2 + scale_fill_catppuccin(palettes = "mocha")
-  grid.arrange(p1_npg, p2_npg, ncol = 2)
+``` {r, echo = F, fig.width = 10, fig.height = 3, dpi = 300}
+  p1_npg <- p1 + scale_color_catppuccin(palette = "mocha")
+  p2_npg <- p2 + scale_fill_catppuccin(palette = "mocha")
 ```
 
 ## Installation

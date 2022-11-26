@@ -16,37 +16,25 @@ Catppuccin for
 
 ## Previews
 
-🌻 Latte</su
-
-```
-## `geom_smooth()` using formula 'y ~ x'
-```
-
-![](README_files/figure-markdown_strict/unnamed-chunk-2-1.png)
-
-🪴 Frappé</su
-
-
-```
-## `geom_smooth()` using formula 'y ~ x'
-```
-
-![](README_files/figure-markdown_strict/unnamed-chunk-3-1.png)
-
-🌺 Macchiato</su
-
-
-```
-## `geom_smooth()` using formula 'y ~ x'
-```
-
-![](README_files/figure-markdown_strict/unnamed-chunk-4-1.png)
-
-🌿 Mochaary>
+🌻 Latte
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](README_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+
+🪴 Frappé
+
+    ## `geom_smooth()` using formula 'y ~ x'
+
+![](README_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+🌺 Macchiato
+
+    ## `geom_smooth()` using formula 'y ~ x'
+
+![](README_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+🌿 Mocha
 
 ## Installation
 
