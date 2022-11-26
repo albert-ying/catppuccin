@@ -1,0 +1,26 @@
+Package: catppuccin
+Type: Package
+Title: Color Palettes based on catppuccin
+Version: 0.1.0
+Authors@R: 
+    person("Kejun", "Ying", email = "albert.k.ying@gmail.com",
+    role = c("aut", "cre"))
+Description: 
+    Catppuccin is a community-driven pastel theme that aims to be the middle ground between low and high contrast themes. It consists of 4
+    soothing warm palettes with 26 eye-candy colors
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    ggplot2,
+    viridis,
+    grDevices,
+    graphics,
+Suggests:
+    devtools,
+    scales,
+    knitr,
+    rmarkdown,
+    dichromat
+VignetteBuilder: knitr
+RoxygenNote: 7.1.2.9000
