@@ -81,6 +81,7 @@ output: md_document
 ``` {r, echo = F, fig.width = 10, fig.height = 3, dpi = 300}
   p1_npg <- p1 + scale_color_catppuccin(palette = "mocha")
   p2_npg <- p2 + scale_fill_catppuccin(palette = "mocha")
+  grid.arrange(p1_npg, p2_npg, ncol = 2)
 ```
 
 ## Installation

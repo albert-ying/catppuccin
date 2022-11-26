@@ -36,6 +36,10 @@ Catppuccin for
 
 🌿 Mocha
 
+    ## `geom_smooth()` using formula 'y ~ x'
+
+![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
 ## Installation
 
 
