@@ -1,0 +1,38 @@
+---
+out: md
+---
+
+## Examples
+
+```{r}
+  library(ggplot2)
+  library(catppuccin)
+```
+
+```{r}
+  ggplot(mtcars, aes(mpg, wt)) +
+    geom_point(aes(colour = factor(cyl))) +
+    scale_colour_catppuccin(palette = "latte") +
+    theme_bw()
+```
+
+```{r}
+  ggplot(mtcars, aes(mpg, wt)) +
+    geom_point(aes(colour = hp)) +
+    scale_colour_catppuccin(palette = "frappe", discrete = FALSE) +
+    theme_bw()
+```
+
+```{r}
+  ggplot(data = mpg) +
+    geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+    scale_colour_catppuccin(palette = "macchiato") +
+    theme_bw()
+```
+
+```{r}
+  ggplot(diamonds) +
+    geom_bar(aes(x = cut, fill = clarity)) +
+    scale_fill_catppuccin() +
+    theme_bw()
+```
