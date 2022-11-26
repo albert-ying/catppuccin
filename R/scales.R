@@ -34,13 +34,13 @@ catppuccin_pal <- function(palette = "mocha", alpha = 1, reverse = FALSE) {
 #' library(ggplot2)
 #' ggplot(mtcars, aes(mpg, wt)) +
 #'   geom_point(aes(colour = factor(cyl))) +
-#'   scale_colour_catppuccin(palette = "ottoman")
+#'   scale_colour_catppuccin(palette = "latte")
 #' ggplot(mtcars, aes(mpg, wt)) +
 #'   geom_point(aes(colour = hp)) +
-#'   scale_colour_catppuccin(palette = "shiraz", discrete = FALSE)
+#'   scale_colour_catppuccin(palette = "frappe", discrete = FALSE)
 #' ggplot(data = mpg) +
 #'   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-#'   scale_colour_catppuccin(palette = "jerusalem")
+#'   scale_colour_catppuccin(palette = "macchiato")
 #' ggplot(diamonds) +
 #'   geom_bar(aes(x = cut, fill = clarity)) +
 #'   scale_fill_catppuccin()
@@ -91,4 +91,26 @@ scale_fill_catppuccin <- function(..., palette = "mocha",
       reverse = reverse, ...
     )(256))
   }
+}
+
+if (FALSE) {
+  library(ggplot2)
+  library(catppuccin)
+  ## set ggplo2 theme
+  ggplot(mtcars, aes(mpg, wt)) +
+   geom_point(aes(colour = factor(cyl))) +
+   scale_colour_catppuccin(palette = "latte") +
+   theme_bw()
+  ggplot(mtcars, aes(mpg, wt)) +
+   geom_point(aes(colour = hp)) +
+   scale_colour_catppuccin(palette = "frappe", discrete = FALSE) +
+    theme_bw()
+  ggplot(data = mpg) +
+   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+   scale_colour_catppuccin(palette = "macchiato") +
+   theme_bw()
+  ggplot(diamonds) +
+   geom_bar(aes(x = cut, fill = clarity)) +
+   scale_fill_catppuccin() +
+   theme_bw()
 }
